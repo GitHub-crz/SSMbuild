@@ -53,10 +53,5 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-4 column">
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/totest">测试</a>
-        </div>
-    </div>
 
 </div>

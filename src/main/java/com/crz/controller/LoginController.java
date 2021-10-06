@@ -1,6 +1,5 @@
 package com.crz.controller;
 
-
 import com.crz.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,14 +13,18 @@ public class LoginController {
     @Qualifier("LoginServiceImpl")
     private LoginService loginService;
 
-    @RequestMapping("/test")
-    public String userlogin(Model model,String username,String pwd){
-        if(loginService.verify(username)==pwd)return "allBook";
-        else return "test";
-    }
-
     @RequestMapping("/totest")
     public String touserlogin(){
         return "test";
+    }
+
+    @RequestMapping("/test")
+    public String userlogin(Model model,String username,String pwd){
+        System.out.println(username+" "+pwd+"  "+loginService.verify(username));
+        if(loginService.verify(username).equals(pwd)){
+            System.out.println("跳转成功");
+            return "redirect:/book/allBook";
+        }
+        else return "fail";
     }
 }

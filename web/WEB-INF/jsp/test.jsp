@@ -13,7 +13,7 @@
 
 <body>
 <div >
-    <form method="post" action="${pageContext.request.contextPath}/book/test">
+    <form method="post" action="${pageContext.request.contextPath}/test">
         用户名：<input type="text" name="username"><br>
         密码：<br><input type="text" name="pwd"><br>
         <input type="submit" value="登录">

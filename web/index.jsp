@@ -24,5 +24,13 @@
 <h3>
     <a href="${pageContext.request.contextPath}/book/allBook">点击进入列表页</a>
 </h3>
+
+<div >
+    <form method="post" action="${pageContext.request.contextPath}/test">
+        用户名：<input type="text" name="username"><br>
+        密码：<input type="text" name="pwd"><br>
+        <input type="submit" value="登录">
+    </form>
+</div>
 </body>
 </html>
